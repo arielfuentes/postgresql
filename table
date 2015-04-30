@@ -1,0 +1,51 @@
+CREATE TABLE etapas
+(
+  tiempo_subida timestamp without time zone,
+  id bigint,
+  pago smallint,
+  x_subida double precision,
+  y_subida double precision,
+  tipo_transporte character varying(20),
+  tipo_operador character varying(500),
+  unidad_negocio character varying(100),
+  serv_un_zp character varying(500),
+  tipo_dia character varying(10),
+  nviaje integer,
+  netapa integer,
+  x_bajada double precision,
+  y_bajada double precision,
+  tiempo_bajada timestamp without time zone,
+  par_subida character varying(30),
+  par_bajada character varying(30),
+  comuna_subida character varying(20),
+  comuna_bajada character varying(20),
+  zona_subida character varying(10),
+  zona_bajada character varying(10),
+  distonroutesubidabajada integer,
+  disteuclidsubidabajada integer,
+  distonrouteparsubidaparbajada integer,
+  disteuclidparsubidaparbajada integer,
+  serv_un_zp2 character varying(500),
+  sitio2 character varying(50),
+  tiempo2 timestamp without time zone,
+  media_hora time without time zone,
+  tiempo_trasbordo double precision,
+  dist_trasbordo double precision,
+  tiempo_caminata double precision,
+  tiempo_espera double precision,
+  tiempo_etapa double precision,
+  escolar integer,
+  factor_exp_etapa double precision,
+  nbusesanteriores integer,
+  tiempo_busanterior timestamp without time zone,
+  busanterior1er integer,
+  busanterior2do integer,
+  busanterior3er integer,
+  tipocorte character varying(100),
+  proposito character varying(100)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE etapas
+ OWNER TO postgres;
