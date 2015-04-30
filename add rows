@@ -1,0 +1,1 @@
+COPY km_ejec FROM 'C:\Users\Public\Documents\Km2Mar15.csv' WITH csv header encoding 'LATIN1' null as '' delimiter ',';
