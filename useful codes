@@ -3,4 +3,4 @@ COPY km_ejec FROM 'C:\Users\Public\Documents\Km2Mar15.csv' WITH csv header encod
 --copy table structure
 CREATE TABLE new_table_name ( like old_table_name );
 --copy table
-CREATE TABLE table2 AS TABLE table1;
+select * into table2 from table1;
