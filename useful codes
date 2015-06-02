@@ -4,3 +4,5 @@ COPY km_ejec FROM 'C:\Users\Public\Documents\Km2Mar15.csv' WITH csv header encod
 CREATE TABLE new_table_name ( like old_table_name );
 --copy table
 select * into table2 from table1;
+--create postgis extension
+sudo apt-get install -y postgis postgresql-9.3-postgis-2.1
