@@ -9,3 +9,5 @@ sudo apt-get install -y postgis postgresql-9.3-postgis-2.1
 --create geom field for points
 ALTER TABLE etapas_2013 ADD COLUMN geom geometry(Point,32719); 
 UPDATE etapas_2013 SET geom = ST_SetSRID(ST_MakePoint(x_subida, y_subida), 32719);
+-- autocomplete
+ctrl + space
