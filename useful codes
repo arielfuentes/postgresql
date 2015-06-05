@@ -11,3 +11,7 @@ ALTER TABLE etapas_2013 ADD COLUMN geom geometry(Point,32719);
 UPDATE etapas_2013 SET geom = ST_SetSRID(ST_MakePoint(x_subida, y_subida), 32719);
 -- autocomplete
 ctrl + space
+--create primary key and a spatial index
+alter table etapas_2013 add column idk SERIAL;
+ALTER TABLE etapas_2013 ADD PRIMARY KEY (idk);
+create index idx_geom ON etapas_2013 using gist(geom);
