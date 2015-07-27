@@ -15,3 +15,6 @@ ctrl + space
 alter table etapas_2013 add column idk SERIAL;
 ALTER TABLE etapas_2013 ADD PRIMARY KEY (idk);
 create index idx_geom ON etapas_2013 using gist(geom);
+--number of col in a table.
+select count(*) from information_schema.columns 
+                  where table_name='etapas_abr_2013';
