@@ -1,5 +1,5 @@
-SELECT count(id)
+SELECT count(id), factor_expansion_etapa, diseno_777_subida, diseno_777_bajada, date(tiempo)
 FROM etapas_mayo_2014
-where diseno_777_subida in ('40', '41') and tipo_dia = ('laboral') and diseno_777_bajada in ('524', '536', '37', '38', '40', 
-'11', '12', '15', '13', '14', '20', '41', '34', '39', '33', '729', '31', '29')
-  group by diseno_777_subida, diseno_777_bajada;
+where diseno_777_subida in ('40', '41') and tipo_dia = ('LABORAL') and diseno_777_bajada in ('524', '536', '37', '38', '40', '11', '12', '15', '13', 
+'14', '20', '41', '34', '39', '33', '729', '31', '29')
+  group by diseno_777_subida, diseno_777_bajada, factor_expansion_etapa, date(tiempo);
