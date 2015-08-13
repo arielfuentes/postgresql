@@ -1,0 +1,2 @@
+-- subset polygons
+select distinct(cent_ot2), geom, gid from "ZONAS_TS" where zonas_ts in ('B', 'C');
