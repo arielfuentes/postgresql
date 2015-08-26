@@ -18,6 +18,12 @@ create index idx_geom ON etapas_2013 using gist(geom);
 --create index
 CREATE INDEX index_name
 ON table_name (column1_name, column2_name);
+--create index with cluster and not unique
+CREATE INDEX "IndicePrincipal"
+  ON etapas_mayo_2014
+  USING btree
+  (diseno_777_subida, tipo_dia COLLATE pg_catalog."default", serviciosentidovariante COLLATE pg_catalog."default", media_hora);
+ALTER TABLE etapas_mayo_2014 CLUSTER ON "IndicePrincipal";
 --number of col in a table.
 select count(*) from information_schema.columns 
                   where table_name='etapas_abr_2013';
