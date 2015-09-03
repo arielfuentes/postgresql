@@ -1,0 +1,3 @@
+SELECT ST_Buffer(geom, 0.05, 'endcap=square join=round') as buffer, gid 
+FROM vial  
+WHERE gid = '1';
