@@ -1,3 +1,8 @@
 SELECT ST_Buffer(geom, 0.05, 'endcap=square join=round') as buffer, gid 
 FROM vial  
 WHERE gid = '1';
+--------------------------------------------------------
+-change projection back and foth to buffer
+SELECT ST_Transform(ST_Buffer(ST_Transform(geom, 32719), 500), 4326) as Buff, gid 
+FROM vial  
+WHERE gid = '1';
