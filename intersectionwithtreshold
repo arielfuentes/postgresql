@@ -1,0 +1,5 @@
+Select distinct(servicios_ago22_2015.geom), servicios_ago22_2015.gid, servicios_ago22_2015.route_name, ST_LENGTH(ST_Intersection(ST_Transform(
+servicios_ago22_2015.geom,32719), ST_Transform(disolve_zones.geom, 32719)))
+from disolve_zones, servicios_ago22_2015
+where ST_Crosses(servicios_ago22_2015.geom, disolve_zones.geom) and servicios_ago22_2015.un = '6' and ST_LENGTH(ST_Intersection(ST_Transform(
+servicios_ago22_2015.geom,32719), ST_Transform(disolve_zones.geom, 32719))) > 8000
