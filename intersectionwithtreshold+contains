@@ -4,4 +4,5 @@ from buffer_zonabicisit2, servicios_ago22_2015
 where ST_Crosses(servicios_ago22_2015.geom, buffer_zonabicisit2.geom) and servicios_ago22_2015.un = '6' and 
 ST_LENGTH(ST_Intersection(ST_Transform(servicios_ago22_2015.geom,32719), 
 ST_Transform(buffer_zonabicisit2.geom, 32719))) > 7000 or 
-(servicios_ago22_2015.un = '6' and ST_Contains(buffer_zonabicisit2.geom, servicios_ago22_2015.geom) = TRUE);
+(servicios_ago22_2015.un = '6' and ST_Contains(buffer_zonabicisit2.geom, servicios_ago22_2015.geom) = TRUE)
+order by (servicios_ago22_2015.route_name);
