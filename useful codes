@@ -22,10 +22,13 @@ ON table_name (column1_name, column2_name);
 CREATE INDEX "IndicePrincipal"
   ON etapas_mayo_2014
   USING btree
-  (diseno_777_subida, tipo_dia COLLATE pg_catalog."default", serviciosentidovariante COLLATE pg_catalog."default", media_hora);
+  (diseno_777_subida, tipo_dia COLLATE pg_catalog."default", serviciosentidovariante COLLATE pg_catalog."default", 
+  media_hora);
 ALTER TABLE etapas_mayo_2014 CLUSTER ON "IndicePrincipal";
 --number of col in a table.
 select count(*) from information_schema.columns 
                   where table_name='etapas_abr_2013';
 -- add column
 ALTER TABLE zona_sit2 ADD COLUMN point_sum double precision;
+-- reproject
+ALTER TABLE bip_abr12 ALTER COLUMN geom_abr12 TYPE geometry(Point, 4326) USING ST_Transform(geom_abr12, 4326);
