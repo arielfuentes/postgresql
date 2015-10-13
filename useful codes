@@ -27,3 +27,5 @@ ALTER TABLE etapas_mayo_2014 CLUSTER ON "IndicePrincipal";
 --number of col in a table.
 select count(*) from information_schema.columns 
                   where table_name='etapas_abr_2013';
+-- add column
+ALTER TABLE zona_sit2 ADD COLUMN point_sum double precision;
