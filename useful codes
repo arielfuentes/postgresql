@@ -32,3 +32,6 @@ select count(*) from information_schema.columns
 ALTER TABLE zona_sit2 ADD COLUMN point_sum double precision;
 -- reproject
 ALTER TABLE bip_abr12 ALTER COLUMN geom_abr12 TYPE geometry(Point, 4326) USING ST_Transform(geom_abr12, 4326);
+-- rename column
+ALTER TABLE zona_sit2
+RENAME point_sum TO point_sumtb812;
