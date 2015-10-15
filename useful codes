@@ -36,3 +36,5 @@ ALTER TABLE bip_abr12 ALTER COLUMN geom_abr12 TYPE geometry(Point, 4326) USING S
 ALTER TABLE zona_sit2
 RENAME point_sum TO point_sumtb812;
 -- fill column
+UPDATE zona_sit2 set point_sumtb814 = (Select sum(count_p) FROM bip_may14 WHERE ST_Intersects(bip_may14.geom_may14, 
+zona_sit2.geom));
