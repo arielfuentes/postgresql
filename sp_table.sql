@@ -1,7 +1,7 @@
 CREATE TABLE bip_abr12u6v2
 (
   gid_abr12 serial NOT NULL,
-  geom_abr12 geometry(Point,4326),
+  geom_abr12 geometry(Point,32719),
   count integer,
   x_subida double precision,
   y_subida double precision,
