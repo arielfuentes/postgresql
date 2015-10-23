@@ -38,3 +38,5 @@ RENAME point_sum TO point_sumtb812;
 -- fill column
 UPDATE zona_sit2 set point_sumtb814 = (Select sum(count_p) FROM bip_may14 WHERE ST_Intersects(bip_may14.geom_may14, 
 zona_sit2.geom));
+-- DELETE DATA FROM TABLE
+DELETE FROM tb8bip12sersentot;
